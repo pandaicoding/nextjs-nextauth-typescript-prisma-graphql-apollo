@@ -42,7 +42,26 @@ model User {
   emailVerified DateTime?
   image         String?
   accounts      Account[]
+  role          Role      @default(USER)
   sessions      Session[]
+  bookmarks     Link[]
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model Link {
+  id          String   @id @default(uuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       String
+  description String
+  url         String
+  imageUrl    String
+  category    String
+  users       User[]
 }
 
 model VerificationToken {
