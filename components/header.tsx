@@ -88,6 +88,11 @@ export default function Header() {
               <p className={styles.cursor}>API</p>
             </Link>
           </li>
+          <li className={styles.navItem}>
+            <Link href="/program">
+              <p className={styles.cursor}>Program</p>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
