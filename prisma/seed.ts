@@ -4,12 +4,12 @@ import { links } from "../data/links"
 const prisma = new PrismaClient()
 
 async function main() {
-  await prisma.user.create({
-    data: {
-      email: "aqmar@gmail.com",
-      role: "ADMIN",
-    },
-  })
+  // await prisma.user.create({
+  //   data: {
+  //     email: "testuser@gmail.com",
+  //     role: "USER",
+  //   },
+  // })
 
   await prisma.link.createMany({
     data: links,

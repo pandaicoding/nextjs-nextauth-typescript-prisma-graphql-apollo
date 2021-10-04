@@ -27,7 +27,7 @@ const AllLinksQuery = gql`
 
 export default function ListProgram() {
   const { data, error, loading, fetchMore } = useQuery(AllLinksQuery, {
-    variables: { first: 2 },
+    variables: { first: 21 },
   });
 
   if (loading) return <p>Loading......</p>;
