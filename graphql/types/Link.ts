@@ -73,14 +73,14 @@ export const LinksQuery = extendType({
               id: args.after,
             },
             orderBy: {
-              createdAt: "desc",
+              createdAt: "asc",
             },
           })
         } else {
           queryResult = await ctx.prisma.link.findMany({
             take: args.first,
             orderBy: {
-              createdAt: "desc",
+              createdAt: "asc",
             },
           })
         }
@@ -94,7 +94,7 @@ export const LinksQuery = extendType({
               id: myCursor,
             },
             orderBy: {
-              createdAt: "desc",
+              createdAt: "asc",
             },
           })
           const result = {
